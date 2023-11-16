@@ -1,0 +1,234 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+	margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* Project specific CSS */
+
+:root {
+	/* Primary colors */
+	--primaryBrightRed: hsl(12, 88%, 59%);
+	--primaryBrightRedLighter: hsla(12, 88%, 59%, 0.624);
+	--primaryDarkBlue: hsl(228, 39%, 23%);
+
+	/* Neutral colors */
+	--neutralDarkGrayishBlue: hsl(227, 12%, 61%);
+	--neutralVeryDarkBlue: hsl(233, 12%, 13%);
+	--neutralVeryPaleRed: hsl(13, 100%, 96%);
+	--neutralVeryLightGray: hsl(0, 0%, 98%);
+
+	/* font-size */
+	--fontSmall: 0.9rem;
+	--fontRegular: 1rem;
+
+	/* font weight */
+	--fontWeightLighter: 300;
+	--fontWeightLight: 400;
+	--fontWeightRegular: 500;
+	--fontWeightBold: 700;
+}
+
+body {
+	min-height: 100vh;
+	font-family: "Be Vietnam Pro", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	background-image: url(/images/bg-tablet-pattern.svg);
+	background-repeat: no-repeat;
+	background-position: right -10rem top -11rem;
+}
+
+main {
+	width: 80%;
+	max-width: 1440px;
+	margin: auto;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3rem 0;
+	margin-bottom: 2rem;
+}
+
+nav ul {
+	display: flex;
+	gap: 2rem;
+}
+
+nav ul li a:hover {
+	color: var(--neutralDarkGrayishBlue);
+}
+
+/* Removing default styles on li */
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primaryDarkBlue);
+	cursor: pointer;
+}
+
+nav ul li {
+	font-size: var(--fontSmall);
+	font-weight: var(--fontWeightLight);
+	color: var(--primaryDarkBlue);
+}
+
+/* styling btns */
+.get-started-btn {
+	background-color: var(--primaryBrightRed);
+	color: var(--neutralVeryLightGray);
+	border: none;
+	border-radius: 5rem;
+	padding: 0.65rem 2rem;
+	font-size: var(--fontSmall);
+	box-shadow: 0 12px 15px -5px var(--primaryBrightRedLighter);
+	transition: background-color 100ms ease-in;
+}
+
+.get-started-btn:hover {
+	background-color: var(--primaryBrightRedLighter);
+}
+
+.section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+	margin-bottom: 2rem;
+}
+
+.section img {
+	position: relative;
+	right: -0.9rem;
+}
+
+.hero .description-title {
+	font-size: 2.7rem;
+	font-weight: var(--fontWeightBold);
+	line-height: 1.2;
+}
+
+.description-styles {
+	display: grid;
+	height: fit-content;
+	width: fit-content;
+	gap: 2rem;
+	max-width: 40%;
+}
+
+.titles {
+	color: var(--primaryDarkBlue);
+}
+
+/* about-manage section */
+
+.about-manage-section {
+	align-items: flex-start;
+}
+
+.description {
+	max-width: 75%;
+	color: var(--neutralDarkGrayishBlue);
+	font-weight: var(--fontWeightLighter);
+	font-size: var(--fontSmall);
+}
+
+.differences-sub-container {
+	display: grid;
+	gap: 2rem;
+}
+
+.differences {
+	display: flex;
+	gap: 1rem;
+	font-size: var(--fontSmall);
+	font-weight: var(--fontWeightLighter);
+}
+
+.differences-texts {
+	display: grid;
+	gap: 1rem;
+	margin-top: 0.5rem;
+}
+
+.differences-title {
+	font-weight: var(--fontWeightBold);
+}
+
+.number-styled {
+	width: fit-content;
+	height: fit-content;
+	background-color: var(--primaryBrightRed);
+	color: var(--neutralVeryLightGray);
+	border: none;
+	border-radius: 5rem;
+	padding: 0.65rem 2rem;
+	font-size: var(--fontSmall);
+}
+
+.hero div .get-started-btn {
+	width: fit-content;
+}
