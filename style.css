@@ -66,7 +66,7 @@ h6 {
 :root {
 	/* Primary colors */
 	--primaryBrightRed: hsl(12, 88%, 59%);
-	--primaryBrightRedLighter: hsla(12, 88%, 59%, 0.624);
+	--primaryBrightRedLighter: hsl(12, 100%, 74%);
 	--primaryDarkBlue: hsl(228, 39%, 23%);
 
 	/* Neutral colors */
@@ -76,7 +76,8 @@ h6 {
 	--neutralVeryLightGray: hsl(0, 0%, 98%);
 
 	/* font-size */
-	--fontSmall: 0.9rem;
+	--fontSmaller: 0.7rem;
+	--fontSmall: 0.8rem;
 	--fontRegular: 1rem;
 
 	/* font weight */
@@ -129,6 +130,9 @@ a {
 	color: var(--primaryDarkBlue);
 	cursor: pointer;
 }
+button {
+	cursor: pointer;
+}
 
 nav ul li {
 	font-size: var(--fontSmall);
@@ -154,8 +158,7 @@ nav ul li {
 }
 
 .section {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: flex;
 	gap: 2rem;
 	justify-content: space-between;
 	margin-bottom: 8rem;
@@ -166,21 +169,26 @@ nav ul li {
 	padding-top: 1rem;
 }
 
+.description-container {
+	max-width: 50%;
+}
+
 .section img {
 	position: relative;
 	right: -0.9rem;
 }
 
 .description-title {
+	max-width: 80%;
 	font-size: 3rem;
 	font-weight: var(--fontWeightBold);
 	line-height: 1.2;
 }
 
 .description-styles {
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	gap: 2rem;
-	height: fit-content;
 }
 
 .titles {
@@ -190,7 +198,7 @@ nav ul li {
 /* about-manage section */
 
 .description {
-	max-width: 60%;
+	max-width: 50%;
 	color: var(--neutralDarkGrayishBlue);
 	font-weight: var(--fontWeightLighter);
 	font-size: var(--fontRegular);
@@ -209,8 +217,13 @@ nav ul li {
 	margin-top: 0.5rem;
 }
 
-.differences-sub-container h2 {
+.whats-different {
 	font-size: 2.5rem;
+	max-width: 90%;
+}
+
+.difference-list {
+	max-width: 50%;
 }
 
 .differences-title {
@@ -253,9 +266,12 @@ nav ul li {
 .testi-cards {
 	display: flex;
 	gap: 2rem;
+	padding: 2rem;
 }
 
 .card {
+	position: relative;
+	max-width: 520px;
 	display: grid;
 	gap: 1rem;
 	text-align: center;
@@ -264,9 +280,15 @@ nav ul li {
 }
 
 .card img {
-	margin: auto;
+	position: absolute;
+	top: -35px;
+	left: calc(50% - 35px);
 	width: 70px;
 	height: 70px;
+}
+
+.card .titles {
+	padding-top: 1.5rem;
 }
 
 .card p:nth-of-type(1) {
@@ -279,21 +301,25 @@ nav ul li {
 }
 
 /* Simplify work */
-
+.simplify-section {
+	background-color: var(--primaryBrightRed);
+	background-image: url(/images/bg-simplify-section-desktop.svg);
+}
 .simplify-work {
+	max-width: 80%;
+	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: var(--primaryBrightRed);
-	padding: 4rem 8rem;
-	background-image: url(/images/bg-simplify-section-desktop.svg);
+
+	padding: 4rem 0;
 }
 
 .simplify-title {
 	max-width: 40%;
 	color: var(--neutralVeryLightGray);
 	font-size: 2rem;
-	font-weight: var(--fontWeightBold);
+	font-weight: var(--fontWeightRegular);
 }
 
 .simplify-cta {
@@ -312,11 +338,81 @@ nav ul li {
 	color: var(--primaryBrightRedLighter);
 }
 
+/* footer */
 footer {
+	padding: 4rem 0;
+	background-color: var(--neutralVeryDarkBlue);
+}
+
+.footer-container {
+	max-width: 80%;
+	margin: auto;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	padding: 4rem 8rem;
-	background-color: var(--neutralVeryDarkBlue);
+
 	color: var(--neutralVeryLightGray);
+
+	font-size: var(--fontSmall);
+	font-weight: var(--fontWeightLighter);
+}
+
+.footer-elements {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.footer-elements a {
+	color: var(--neutralVeryLightGray);
+	transition: color 100ms ease-in;
+}
+
+.footer-elements a:hover {
+	color: var(--primaryBrightRed);
+}
+
+.logo-social-icons svg {
+	cursor: pointer;
+}
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.social-icons i {
+	font-size: 1.5rem;
+	transition: color 100ms ease-in;
+	cursor: pointer;
+}
+
+.social-icons i:hover {
+	color: var(--primaryBrightRed);
+}
+
+.copyright {
+	text-align: right;
+	font-size: var(--fontSmaller);
+	font-weight: var(--fontWeightLighter);
+	opacity: 0.6;
+}
+
+.newsletter-form {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.newsletter-form input[type="text"] {
+	border: none;
+	border-radius: 5rem;
+	padding: 0.7rem 1rem;
+	font-size: 0.7rem;
+	outline: none;
+}
+
+.newsletter-form button {
+	padding: 0.65rem 1.3rem;
+	box-shadow: none;
+	font-size: var(--fontSmaller);
 }
