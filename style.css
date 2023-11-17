@@ -138,6 +138,7 @@ nav ul li {
 
 /* styling btns */
 .get-started-btn {
+	width: fit-content;
 	background-color: var(--primaryBrightRed);
 	color: var(--neutralVeryLightGray);
 	border: none;
@@ -153,11 +154,16 @@ nav ul li {
 }
 
 .section {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
 	justify-content: space-between;
-	align-items: center;
 	padding: 1rem 0;
 	margin-bottom: 2rem;
+}
+
+.hero {
+	align-items: center;
 }
 
 .section img {
@@ -165,18 +171,16 @@ nav ul li {
 	right: -0.9rem;
 }
 
-.hero .description-title {
-	font-size: 2.7rem;
+.description-title {
+	font-size: 3rem;
 	font-weight: var(--fontWeightBold);
 	line-height: 1.2;
 }
 
 .description-styles {
 	display: grid;
-	height: fit-content;
-	width: fit-content;
 	gap: 2rem;
-	max-width: 40%;
+	height: fit-content;
 }
 
 .titles {
@@ -185,26 +189,17 @@ nav ul li {
 
 /* about-manage section */
 
-.about-manage-section {
-	align-items: flex-start;
-}
-
 .description {
-	max-width: 75%;
+	max-width: 60%;
 	color: var(--neutralDarkGrayishBlue);
 	font-weight: var(--fontWeightLighter);
-	font-size: var(--fontSmall);
-}
-
-.differences-sub-container {
-	display: grid;
-	gap: 2rem;
+	font-size: var(--fontRegular);
 }
 
 .differences {
 	display: flex;
 	gap: 1rem;
-	font-size: var(--fontSmall);
+	font-size: var(--fontRegular);
 	font-weight: var(--fontWeightLighter);
 }
 
@@ -214,8 +209,16 @@ nav ul li {
 	margin-top: 0.5rem;
 }
 
+.differences-sub-container h2 {
+	font-size: 2.5rem;
+}
+
 .differences-title {
 	font-weight: var(--fontWeightBold);
+}
+
+.difference {
+	max-width: 100%;
 }
 
 .number-styled {
@@ -227,8 +230,4 @@ nav ul li {
 	border-radius: 5rem;
 	padding: 0.65rem 2rem;
 	font-size: var(--fontSmall);
-}
-
-.hero div .get-started-btn {
-	width: fit-content;
 }
