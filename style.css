@@ -158,12 +158,12 @@ nav ul li {
 	grid-template-columns: 1fr 1fr;
 	gap: 2rem;
 	justify-content: space-between;
-	padding: 1rem 0;
-	margin-bottom: 2rem;
+	margin-bottom: 8rem;
 }
 
 .hero {
 	align-items: center;
+	padding-top: 1rem;
 }
 
 .section img {
@@ -230,4 +230,93 @@ nav ul li {
 	border-radius: 5rem;
 	padding: 0.65rem 2rem;
 	font-size: var(--fontSmall);
+	font-weight: var(--fontWeightBold);
+}
+
+/* Testimonials section */
+
+.testimonials {
+	display: grid;
+	gap: 2rem;
+	margin-bottom: 8rem;
+}
+
+.testimonials-cta {
+	margin: auto;
+}
+
+.testimonials h2 {
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+.testi-cards {
+	display: flex;
+	gap: 2rem;
+}
+
+.card {
+	display: grid;
+	gap: 1rem;
+	text-align: center;
+	background-color: var(--neutralVeryLightGray);
+	padding: 2rem;
+}
+
+.card img {
+	margin: auto;
+	width: 70px;
+	height: 70px;
+}
+
+.card p:nth-of-type(1) {
+	font-weight: var(--fontWeightBold);
+}
+
+.testimonials-text {
+	color: var(--neutralDarkGrayishBlue);
+	font-weight: var(--fontWeightLighter);
+}
+
+/* Simplify work */
+
+.simplify-work {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--primaryBrightRed);
+	padding: 4rem 8rem;
+	background-image: url(/images/bg-simplify-section-desktop.svg);
+}
+
+.simplify-title {
+	max-width: 40%;
+	color: var(--neutralVeryLightGray);
+	font-size: 2rem;
+	font-weight: var(--fontWeightBold);
+}
+
+.simplify-cta {
+	background-color: var(--neutralVeryLightGray);
+	color: var(--primaryBrightRed);
+	width: fit-content;
+	border: none;
+	border-radius: 5rem;
+	padding: 0.65rem 2rem;
+	font-size: var(--fontSmall);
+	box-shadow: 0 12px 15px -5px var(--primaryBrightRedLighter);
+	transition: background-color 100ms ease-in;
+}
+
+.simplify-cta:hover {
+	color: var(--primaryBrightRedLighter);
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4rem 8rem;
+	background-color: var(--neutralVeryDarkBlue);
+	color: var(--neutralVeryLightGray);
 }
