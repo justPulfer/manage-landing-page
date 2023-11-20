@@ -174,6 +174,11 @@ nav ul li {
 	padding-top: 1rem;
 }
 
+.hero-img {
+	width: 100%;
+	min-width: 50%;
+}
+
 .description-title {
 	max-width: 80%;
 	font-size: 3rem;
@@ -224,9 +229,6 @@ nav ul li {
 }
 
 .differences-texts .titles {
-	display: flex;
-	gap: 1rem;
-	align-items: center;
 	font-weight: var(--fontWeightBold);
 }
 
@@ -246,17 +248,16 @@ nav ul li {
 
 .difference {
 	max-width: 100%;
-	padding-left: 6em;
+	padding-left: 6rem;
 }
 
 .number-styled {
-	width: fit-content;
-	height: fit-content;
 	background-color: var(--primaryBrightRed);
 	color: var(--neutralVeryLightGray);
 	border: none;
 	border-radius: 5rem;
 	padding: 0.65rem 2rem;
+	margin-right: 1rem;
 	font-size: var(--fontSmall);
 	font-weight: var(--fontWeightBold);
 }
@@ -463,7 +464,7 @@ footer {
 		padding-top: 0;
 	}
 
-	.section {
+	.hero {
 		flex-direction: column-reverse;
 		margin-bottom: 5rem;
 	}
@@ -506,5 +507,26 @@ footer {
 		margin: auto;
 	}
 
+	/* differences texts */
+	.differences-texts .titles {
+		display: flex;
+		align-items: center;
+		text-align: left;
+		background-color: var(--neutralVeryPaleRed);
+	}
+
+	.differences-title {
+		max-width: 100%;
+		font-size: 2rem;
+	}
+
+	.number-styled {
+		padding: 0.55rem 1.2rem;
+		margin-right: 0.5rem;
+	}
+
 	/* about-manage-section */
+	.about-manage-section {
+		flex-direction: column;
+	}
 }
