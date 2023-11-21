@@ -32,18 +32,18 @@
 	<body>
 		<main>
 			<header>
-				<nav>
+				<nav class="header-nav">
 					<a href="/"><img src="/images/logo.svg" alt="" /></a>
-					<ul>
+					<ul id="header-nav-lists">
 						<li><a href="">Pricing</a></li>
 						<li><a href="">Product</a></li>
 						<li><a href="">About Us</a></li>
 						<li><a href="">Careers</a></li>
 						<li><a href="">Community</a></li>
 					</ul>
-					<a class="get-started-btn">Get Started</a>
+					<button class="get-started-btn">Get Started</button>
 					<div class="hamburger-icons">
-						<i class="bx bx-menu"></i>
+						<i class="bx bx-menu" id="bx"></i>
 						<!-- <i class="bx bx-x"></i> -->
 					</div>
 				</nav>
@@ -183,7 +183,7 @@
 		</section>
 		<footer>
 			<div class="footer-container">
-				<div class="logo-socialIcons footer-elements">
+				<div class="logo-social-icons">
 					<svg xmlns="http://www.w3.org/2000/svg" width="146" height="24">
 						<g fill="#ffffff" fill-rule="evenodd">
 							<path
@@ -206,30 +206,31 @@
 						</g>
 					</svg>
 					<div class="social-icons">
-						<i class="bx bxl-facebook-square"></i>
-						<i class="bx bxl-youtube"></i>
-						<i class="bx bxl-twitter"></i>
-						<i class="bx bxl-pinterest"></i>
-						<i class="bx bxl-instagram"></i>
+						<a href=""><i class="bx bxl-facebook-square"></i></a>
+						<a href=""><i class="bx bxl-youtube"></i></a>
+						<a href=""><i class="bx bxl-twitter"></i></a>
+						<a href=""><i class="bx bxl-pinterest"></i></a>
+						<a href=""><i class="bx bxl-instagram"></i></a>
 					</div>
 				</div>
+				<nav class="footer-nav">
+					<div class="footer-links">
+						<ul class="footer-elements">
+							<li><a href="">Home</a></li>
+							<li><a href="">Pricing</a></li>
+							<li><a href="">Products</a></li>
+							<li><a href="">About Us</a></li>
+						</ul>
+					</div>
 
-				<div class="footer-links">
-					<ul class="footer-elements">
-						<li><a href="">Home</a></li>
-						<li><a href="">Pricing</a></li>
-						<li><a href="">Products</a></li>
-						<li><a href="">About Us</a></li>
-					</ul>
-				</div>
-
-				<div class="footer-links">
-					<ul class="footer-elements">
-						<li><a href="">Careers</a></li>
-						<li><a href="">Community</a></li>
-						<li><a href="">Privacy Policy</a></li>
-					</ul>
-				</div>
+					<div class="footer-links">
+						<ul class="footer-elements">
+							<li><a href="">Careers</a></li>
+							<li><a href="">Community</a></li>
+							<li><a href="">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</nav>
 
 				<div class="newsletter-form-container footer-elements">
 					<div class="newsletter-form">
