@@ -283,16 +283,17 @@ button {
 }
 
 .testi-cards {
+	width: 115%;
+	margin-left: -6rem;
 	display: grid;
 	grid-auto-flow: column;
-	grid-auto-columns: 40%;
+	grid-auto-columns: 35%;
 
 	overflow-x: auto;
 	overscroll-behavior-inline: contain;
 
 	gap: 2rem;
 	padding: 4rem;
-	margin-left: -9rem;
 }
 
 .snap-inline {
@@ -301,6 +302,21 @@ button {
 
 .snap-inline > * {
 	scroll-snap-align: start;
+}
+
+.carousel-nav {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.carousel-indicator {
+	border: none;
+	border-radius: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	outline: 2px solid var(--neutralVeryPaleRed);
+	background: none;
 }
 
 .card {
