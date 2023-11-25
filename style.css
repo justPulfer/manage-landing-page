@@ -283,9 +283,24 @@ button {
 }
 
 .testi-cards {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 40%;
+
+	overflow-x: auto;
+	overscroll-behavior-inline: contain;
+
 	gap: 2rem;
-	padding: 2rem;
+	padding: 4rem;
+	margin-left: -9rem;
+}
+
+.snap-inline {
+	scroll-snap-type: inline mandatory;
+}
+
+.snap-inline > * {
+	scroll-snap-align: start;
 }
 
 .card {
