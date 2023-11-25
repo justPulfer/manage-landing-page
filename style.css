@@ -286,11 +286,14 @@ button {
 	display: flex;
 	gap: 2rem;
 	padding: 2rem;
+	max-width: 80%;
+	margin: auto;
 }
 
 .card {
 	position: relative;
-	max-width: 520px;
+	width: 35rem;
+	min-width: 320px;
 	display: grid;
 	gap: 1rem;
 	text-align: center;
