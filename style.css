@@ -283,17 +283,23 @@ button {
 }
 
 .testi-cards {
-	width: 115%;
-	margin-left: -6rem;
+	width: 100%;
 	display: grid;
 	grid-auto-flow: column;
-	grid-auto-columns: 35%;
-
+	grid-auto-columns: 38%;
 	overflow-x: auto;
 	overscroll-behavior-inline: contain;
 
-	gap: 2rem;
+	gap: 1rem;
 	padding: 4rem;
+
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari */
+.testi-cards::-webkit-scrollbar {
+	display: none;
 }
 
 .snap-inline {
@@ -305,7 +311,7 @@ button {
 }
 
 .carousel-nav {
-	display: flex;
+	display: none;
 	justify-content: center;
 	gap: 1rem;
 }
@@ -317,6 +323,10 @@ button {
 	height: 0.5rem;
 	outline: 2px solid var(--neutralVeryPaleRed);
 	background: none;
+}
+
+.carousel-indicator.current {
+	background: var(--primaryBrightRedLighter);
 }
 
 .card {
@@ -596,7 +606,8 @@ footer {
 	}
 
 	.differences-texts .titles {
-		width: 110%;
+		width: 95vw;
+		margin-left: 1rem;
 		max-width: 40rem;
 		display: flex;
 		align-items: center;
@@ -607,6 +618,7 @@ footer {
 
 	.difference {
 		max-width: 40rem;
+		text-align: left;
 	}
 
 	.differences-title {
@@ -623,6 +635,23 @@ footer {
 	/* about-manage-section */
 	.about-manage-section {
 		flex-direction: column;
+	}
+
+	/* Testimonials */
+	.testimonials h2 {
+		font-size: 2rem;
+		margin-bottom: 0;
+	}
+
+	.testi-cards {
+		grid-auto-columns: 130%;
+		margin: 0 1.5rem;
+		gap: 5rem;
+		padding-bottom: 0;
+	}
+
+	.carousel-nav {
+		display: flex;
 	}
 
 	/* simplify section */
