@@ -337,6 +337,7 @@ button {
 	text-align: center;
 	background-color: var(--neutralVeryLightGray);
 	padding: 2rem;
+	margin: 4rem;
 }
 
 .card img {
@@ -358,6 +359,18 @@ button {
 .testimonials-text {
 	color: var(--neutralDarkGrayishBlue);
 	font-weight: var(--fontWeightLighter);
+}
+
+/* swiper */
+.swiper {
+	width: 100%;
+	height: max-content;
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Simplify work */
