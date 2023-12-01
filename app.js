@@ -17,14 +17,14 @@ expandMenu.addEventListener("click", (e) => {
 
 // Swiper js
 const swiper = new Swiper(".swiper", {
-	slidesPerView: "3",
+	slidesPerView: "2.5",
 	grabCursor: "true",
-	loop: "true",
-	spaceBetween: "10",
-	centeredSlides: "false",
-	pagination: "true",
+	loop: true,
+	spaceBetween: "30",
+	centeredSlides: true,
+	pagination: true,
 	autoplay: {
-		delay: 3000,
+		delay: 50000,
 		disableOnInteraction: false,
 		pauseOnMouseEnter: true,
 	},

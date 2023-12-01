@@ -282,58 +282,8 @@ button {
 	margin-bottom: 2rem;
 }
 
-.testi-cards {
-	width: 100%;
-	display: grid;
-	grid-auto-flow: column;
-	grid-auto-columns: 38%;
-	overflow-x: auto;
-	overscroll-behavior-inline: contain;
-
-	gap: 1rem;
-	padding: 4rem;
-
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari */
-.testi-cards::-webkit-scrollbar {
-	display: none;
-}
-
-.snap-inline {
-	scroll-snap-type: inline mandatory;
-}
-
-.snap-inline > * {
-	scroll-snap-align: start;
-}
-
-.carousel-nav {
-	display: none;
-	justify-content: center;
-	gap: 1rem;
-}
-
-.carousel-indicator {
-	border: none;
-	border-radius: 50%;
-	width: 0.5rem;
-	height: 0.5rem;
-	outline: 2px solid var(--neutralVeryPaleRed);
-	background: none;
-}
-
-.carousel-indicator.current {
-	background: var(--primaryBrightRedLighter);
-}
-
 .card {
-	position: relative;
-	max-width: 520px;
-	display: grid;
-	gap: 1rem;
+	max-width: 30rem;
 	text-align: center;
 	background-color: var(--neutralVeryLightGray);
 	padding: 2rem;
@@ -365,12 +315,6 @@ button {
 .swiper {
 	width: 100%;
 	height: max-content;
-}
-
-.swiper-slide {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 /* Simplify work */
