@@ -93,9 +93,9 @@ body {
 	font-family: "Be Vietnam Pro", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	background-image: url(/images/bg-tablet-pattern.svg);
+	background-image: url(./images/bg-tablet-pattern.svg);
 	background-repeat: no-repeat;
-	background-position: right -10rem top -11rem;
+	background-position: right -12vw top -12vw;
 }
 
 main {
@@ -291,7 +291,7 @@ button {
 .card {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 2rem;
 	position: relative;
 	text-align: center;
 	background-color: var(--neutralVeryLightGray);
@@ -308,7 +308,7 @@ button {
 }
 
 .card .titles {
-	padding-top: 1.5rem;
+	padding-bottom: 1rem;
 }
 
 .card p:nth-of-type(1) {
@@ -325,8 +325,14 @@ button {
 	width: 100%;
 }
 
+.swiper-pagination-bullet {
+	background: none !important;
+	outline: 2px solid var(--primaryBrightRed) !important;
+	outline-offset: -1px !important;
+}
+
 .swiper-pagination-bullet-active {
-	border: solid var(--primaryBrightRedLighter);
+	background-color: var(--primaryBrightRed) !important;
 }
 
 /* Simplify work */
@@ -468,12 +474,12 @@ footer {
 }
 
 /* Media Queries */
-/* ####### */
 
-/*  Mobile and Tablet */
-@media screen and (max-width: 1024px) {
+/* Tablet */
+@media (max-width: 1024px) {
 	body {
-		background-size: 26rem;
+		background-image: url(./images/bg-tablet-pattern.svg);
+		background-size: 100%;
 		background-position: right -7rem top -5rem;
 	}
 
@@ -481,9 +487,9 @@ footer {
 		width: 90%;
 	}
 
-	.section {
+	/* .section {
 		margin: 4rem;
-	}
+	} */
 
 	.header-nav {
 		position: relative;
@@ -553,7 +559,7 @@ footer {
 
 	.description-title {
 		max-width: 100%;
-		font-size: 2.5rem;
+		font-size: 2.3rem;
 		font-weight: var(--fontWeightSemiBold);
 	}
 
@@ -562,6 +568,12 @@ footer {
 		max-width: 100%;
 		text-align: center;
 		gap: 0;
+	}
+
+	.hero .description {
+		max-width: 60%;
+		margin: auto;
+		padding: 2rem 0;
 	}
 
 	.description {
@@ -576,6 +588,12 @@ footer {
 
 	.differences-sub-container {
 		align-items: center;
+	}
+
+	.differences-sub-container > .description {
+		max-width: 60%;
+
+		padding: 2rem 0;
 	}
 
 	.differences-texts .titles {
@@ -594,6 +612,10 @@ footer {
 		text-align: left;
 	}
 
+	.differences-texts {
+		gap: 0;
+	}
+
 	.differences-title {
 		display: block;
 		max-width: 100%;
@@ -606,8 +628,10 @@ footer {
 	}
 
 	/* about-manage-section */
+
 	.about-manage-section {
 		flex-direction: column;
+		margin-bottom: 4rem;
 	}
 
 	/* Testimonials */
@@ -622,8 +646,8 @@ footer {
 	}
 
 	.card {
-		max-width: 100%;
 		margin: 3rem 1rem 3rem 0;
+		padding: 3rem 1rem;
 	}
 
 	.carousel-nav {
