@@ -16,24 +16,64 @@ expandMenu.addEventListener("click", (e) => {
 });
 
 // Swiper js
+// const swiper = new Swiper(".swiper", {
+// 	slidesPerView: "2.5",
+// 	grabCursor: "true",
+// 	loop: true,
+// 	spaceBetween: "30",
+// 	centeredSlides: true,
+// 	pagination: true,
+// 	autoplay: {
+// 		delay: 3000,
+// 		disableOnInteraction: false,
+// 		pauseOnMouseEnter: true,
+// 	},
+// 	// Optional parameters
+// 	direction: "horizontal",
+// 	loop: true,
+
+// 	pagination: {
+// 		el: ".swiper-pagination",
+// 	},
+// });
+
 const swiper = new Swiper(".swiper", {
-	slidesPerView: "2.5",
-	grabCursor: "true",
-	loop: true,
-	spaceBetween: "30",
+	grabCursor: true,
 	centeredSlides: true,
-	pagination: true,
+
 	autoplay: {
-		delay: 50000,
+		delay: 2000,
 		disableOnInteraction: false,
 		pauseOnMouseEnter: true,
 	},
-	// Optional parameters
+	// // Optional parameters
 	direction: "horizontal",
 	loop: true,
 
-	// If we need pagination
-	pagination: {
-		el: ".swiper-pagination",
+	breakpoints: {
+		// when window width is >= 320px
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+				bulletActiveClass: "swiper-pagination-bullet-active",
+			},
+		},
+		// when window width is >= 720px
+		720: {
+			slidesPerView: 1.5,
+			spaceBetween: 20,
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		},
+
+		// when window width is >= 1080px
+		1080: {
+			slidesPerView: 2.5,
+			spaceBetween: 20,
+		},
 	},
 });
